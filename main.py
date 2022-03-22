@@ -24,25 +24,25 @@ def ceasar_coder(language, decoder, key, text):
             text_list[i] = chr(((ord(text_list[i]) - start2) + (coder_symbol * key)) % abc + start2)
     return ''.join(text_list)
 
-#print("Добро пожаловать к Цезарю, в его шифровальный алгоритм!")
-#while True:
-#    language = input('С каким языком будем работать? en - английский, все остальное - русский. \n')
-#    decoder = input('Будем зашифровывать или дешифровывать? ш - шифровка, все остальное - дешифровка. \n')
-#    while True:
-#        key = input('Какой у нас шаг шифровки? Введи любое число, или !, если хочешь сделать цикл проверки на все варианты. \n')
- #       if is_valid_number(key):
- #           key = int(key)
- #           break
- #       elif key == '!':
- #           if language == 'en':
-#                limit = 26
-#            else:
-#                limit = 32
- #           break
- #       else:
- #           print('Так мы ничего не добьемся, нужно ввести число.')
-#    text = input("Итак, какой у нас текст? \n")
-#    print('Чтож, а вот и результат:')
+print("Добро пожаловать к Цезарю, в его шифровальный алгоритм!")
+while True:
+    language = input('С каким языком будем работать? en - английский, все остальное - русский. \n')
+    decoder = input('Будем зашифровывать или дешифровывать? ш - шифровка, все остальное - дешифровка. \n')
+    while True:
+        key = input('Какой у нас шаг шифровки? Введи любое число, или !, если хочешь сделать цикл проверки на все варианты. \n')
+        if is_valid_number(key):
+            key = int(key)
+            break
+        elif key == '!':
+            if language == 'en':
+                limit = 26
+            else:
+                limit = 32
+            break
+        else:
+            print('Так мы ничего не добьемся, нужно ввести число.')
+    text = input("Итак, какой у нас текст? \n")
+    print('Чтож, а вот и результат:')
 text = input().split()
 for word in text:
     count = 0
